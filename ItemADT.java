@@ -5,6 +5,8 @@ public interface ItemADT {
 
     public String getReference();
 
+    public String getDescription();
+
     public float getWeight();
 
     public void setWeight(float weight);
@@ -22,6 +24,8 @@ public interface ItemADT {
     public void setDepth(float depth);
 
     public void setReference(String reference);
+
+    public void setDescription(String description);
 
     public String toString();
 }

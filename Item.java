@@ -1,10 +1,11 @@
 public class Item implements ItemADT {
 
-    private String reference;
+    private String reference, description;
     private float depth, length, height, weight, volume;
 
-    public Item(String reference, float depth, float length, float height, float weight) {
+    public Item(String reference, String description, float depth, float length, float height, float weight) {
         this.reference = reference;
+        this.description = description;
         this.depth = depth;
         this.length = length;
         this.height = height;
@@ -22,6 +23,10 @@ public class Item implements ItemADT {
 
     public String getReference() {
         return reference;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public float getWeight() {
@@ -60,9 +65,13 @@ public class Item implements ItemADT {
         this.reference = reference;
     }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
-        return "Reference: " + this.reference + " [" + this.depth + ", " + this.height + ", " + this.length + ", "
+        return "Reference: " + this.reference + "Descritpion: "+ this.description + " [" + this.depth + ", " + this.height + ", " + this.length + ", "
                 + this.weight + "]";
     }
 
